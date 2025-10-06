@@ -34,7 +34,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2c3e50;
+    color: #5f5959;
     font-family:Arial, Helvetica, sans-serif
 }
 
@@ -175,14 +175,14 @@ nav ul li a:hover {
 .product-price {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #0fcf3f;
+    color: #19bb04fa;
     margin-bottom: 1rem;
 }
 
 .add-to-cart {
     width: 100%;
     padding: 0.7rem;
-    background-color: #2023e7;
+    background-color: #0419bb;
     color: white;
     border: none;
     border-radius: 4px;
@@ -260,7 +260,7 @@ nav ul li a:hover {
 }
 
 .cart-item-price {
-    color: #00be4ffa;
+    color: #19bb04fa;
     font-weight: 600;
 }
 
