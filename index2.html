@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Círculo da Lua — Arcanum Encantaria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b12;
+      --card:#0f1720;
+      --accent:#8b5cf6;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#06060a 0%, #0b0b12 60%);color:#e6eef8;min-height:100vh;}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+
+    header{display:flex;align-items:center;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .moon{width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #fff7 0%, #ffffff10 10%, #8b5cf6 60%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(139,92,246,0.15)}
+    .brand{font-family:'Playfair Display',serif;font-size:20px}
+    .subtitle{font-size:13px;color:var(--muted);margin-top:2px}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+
+    .intro h1{margin:0;font-family:'Playfair Display',serif;font-size:32px}
+    .intro p{color:var(--muted);margin:12px 0 18px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:var(--glass);padding:8px 12px;border-radius:12px;font-size:13px;color:var(--muted)}
+
+    .how{margin-top:16px}
+    .step{display:flex;gap:12px;align-items:flex-start;margin:12px 0}
+    .bubble{min-width:44px;height:44px;border-radius:12px;background:linear-gradient(180deg,var(--accent),#5f3dcf);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .step p{margin:0;color:var(--muted)}
+
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#6ee7b7);color:#061017}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .panel{padding:18px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .points{font-size:28px;font-weight:700;color:#ffd5f7}
+    .small{font-size:13px;color:var(--muted)}
+
+    .list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+    .benefit{background:var(--card);padding:10px;border-radius:10px;color:var(--muted);font-size:14px}
+
+    footer{margin-top:30px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#05050a, #08101a);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .list{grid-template-columns:1fr}
+      .brand{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="moon">🌙</div>
+        <div>
+          <div class="brand">Arcanum Encantaria</div>
+          <div class="subtitle">Círculo da Lua — Programa de Fidelidade</div>
+        </div>
+      </div>
+      <div style="margin-left:auto;color:var(--muted);font-size:13px">Conecte-se com o invisível • Ganhe Pontos Lunares</div>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h1>Círculo da Lua</h1>
+        <p>Seu caminho de magia cotidiana agora recompensa cada ritual. Acumule Pontos Lunares a cada compra e troque por descontos, presentes consagrados e acesso a rituais exclusivos.</p>
+
+        <div class="badges">
+          <div class="badge">Pontos acumuláveis</div>
+          <div class="badge">Frete grátis por 500 pontos</div>
+          <div class="badge">Presentes ritualísticos</div>
+        </div>
+
+        <div class="how">
+          <h3 style="margin-top:18px">Como funciona</h3>
+          <div class="step">
+            <div class="bubble">1</div>
+            <div>
+              <p><strong>1 Ponto Lunar</strong> a cada <strong>R$1</strong> gasto.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="bubble">2</div>
+            <div>
+              <p><strong>200 Pontos</strong> = <strong>10% de desconto</strong> na próxima compra.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="bubble">3</div>
+            <div>
+              <p><strong>500 Pontos</strong> = <strong>Frete grátis</strong> + <strong>presente ritualístico</strong>.</p>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button class="btn btn-primary" onclick="openSignup()">Cadastre-se Agora</button>
+            <button class="btn btn-ghost" onclick="openInfo()">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="small">Seus Pontos</div>
+            <div class="points" id="pointsDisplay">0</div>
+            <div class="small">Ganhe já ao criar sua conta</div>
+          </div>
+          <div style="text-align:right">
+            <div class="small">Próxima recompensa</div>
+            <div style="font-weight:700;margin-top:6px">10% de desconto</div>
+            <div class="small">em 200 Pontos</div>
+          </div>
+        </div>
+
+        <div class="list">
+          <div class="benefit">Convites para rituais online</div>
+          <div class="benefit">Presentes energizados</div>
+          <div class="benefit">Acesso antecipado a coleções</div>
+          <div class="benefit">Ofertas exclusivas de fases lunares</div>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">Dica: participe em noites de Lua Cheia para ofertas especiais.</div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Como resgatar</strong>
+        <div style="color:var(--muted);margin-top:6px;font-size:13px">Ao concluir a compra, escolha a opção "Usar Pontos" na finalização do pedido.</div>
+      </div>
+      <div style="text-align:right;color:var(--muted);font-size:13px">Precisa de ajuda? <a href="#" style="color:#cbd5ff;text-decoration:none">Fale conosco</a></div>
+    </footer>
+
+  </div>
+
+  <!-- Simples JS para demonstração do comportamento de pontos -->
+  <script>
+    // Demo: simula um usuário com pontos salvos no localStorage
+    function getPoints(){
+      return Number(localStorage.getItem('arcanum_points') || 0);
+    }
+    function setPoints(v){
+      localStorage.setItem('arcanum_points', String(v));
+      render();
+    }
+    function render(){
+      document.getElementById('pointsDisplay').textContent = getPoints();
+    }
+    function openSignup(){
+      let add = prompt('Crie sua conta — insira seu nome de bruxa (demo) e ganhe 50 Pontos Lunares:');
+      if(add){
+        setPoints(getPoints()+50);
+        alert('Bem-vinde ao Círculo! Você ganhou 50 Pontos Lunares.');
+      }
+    }
+    function openInfo(){
+      alert('200 pontos = 10% de desconto. 500 pontos = frete grátis + presente ritualístico. Convites para eventos lunares aparecem periodicamente.');
+    }
+    // inicia demo
+    render();
+  </script>
+</body>
+</html>

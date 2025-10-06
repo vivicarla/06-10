@@ -3,45 +3,69 @@
 const products = [
     {
         id: 1,
-        name: "Cadeira de Escritório Minimalista",
-        price: 599.99,
-        image: "image/Cadeira de Escritório Minimalista.avif"
+        name: "Kit Altar de Bruxaria",
+        price: 185.00,
+        image: "image/altardebruxaria.avif"
     },
     {
         id: 2,
-        name: "Mesa de Centro Moderna",
-        price: 349.99,
-        image: "image/Mesa de Centro Moderna2.avif"
+        name: "Pedra Vassoura de Bruxa",
+        price: 25.90,
+        image: "image/pedravassouradebruxa.avif"
     },
     {
         id: 3,
-        name: "Luminária de Mesa Elegante",
-        price: 129.99,
-        image: "image/Luminária de Mesa Elegante.avif"
+        name: "Kit Seleção 14 Cristais para o Equilíbrio Energético - Pedras Mistas",
+        price: 19.90,
+        image: "image/pedras.avif"
     },
     {
         id: 4,
-        name: "Vaso Decorativo Cerâmica",
-        price: 79.99,
-        image: "image/Vaso Decorativo Cerâmica.avif"
+        name: "Punhal Wicca Athame Fenix - Dourado 21cm",
+        price: 69.90,
+        image: "image/punhal.avif"
     },
     {
         id: 5,
-        name: "Conjunto de Canetas Premium",
-        price: 45.99,
-        image: "image/Conjunto de Canetas Premium.avif"
+        name: "Armário preto - Lilith",
+        price: 396.00   ,
+        image: "image/armariopreto.avif"
     },
     {
         id: 6,
-        name: "Caderno de Notas Capa Dura",
-        price: 29.99,
-        image: "image/Caderno de Notas Capa Dura.avif"
+        name: "Perfume Devocional - Musas",
+        price: 117.99,
+        image: "image/perfume.avif"
     },
     {
         id: 7,
-        name: "Sofá Vintage verde musgo",
-        price: 799.99,
-        image: "image/Sofá Vintage.avif"
+        name: "Vela Vibracional - Bastet",
+        price: 86.90,
+        image: "image/vela.avif"
+    },
+    {
+        id: 8,
+        name: "Toalha de Altar - Árvore da Vida",
+        price: 122.99,
+        image: "image/toalha.avif"
+    },
+    {
+        id: 9,
+        name: "Origens Mágicas da Wicca",
+        price: 81.99,
+        image: "image/origens.avif"
+    },
+    {
+        id: 10,
+        name: "Chave dos Grandes Mistérios, Eliphas Levi",
+        price: 29.99,
+        image: "image/chavedosgrandesmisterios.avif"
+    },
+    {
+        id: 11,
+        name: "Tarô Oráculo e Métodos - Vol. 3",
+        price: 103.00,
+        image: "image/taro.avif"
     },
 ];
 
