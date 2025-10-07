@@ -15,13 +15,13 @@ const products = [
     },
     {
         id: 3,
-        name: "Kit Seleção 14 Cristais para o Equilíbrio Energético - Pedras Mistas",
+        name: "14 Cristais para o Equilíbrio Energético",
         price: 19.90,
         image: "image/pedras.avif"
     },
     {
         id: 4,
-        name: "Punhal Wicca Athame Fenix - Dourado 21cm",
+        name: "Punhal Wicca Athame Fenix",
         price: 69.90,
         image: "image/punhal.avif"
     },
@@ -33,19 +33,19 @@ const products = [
     },
     {
         id: 6,
-        name: "Perfume Devocional - Musas",
+        name: "Perfume Devocional",
         price: 117.99,
         image: "image/perfume.avif"
     },
     {
         id: 7,
-        name: "Vela Vibracional - Bastet",
+        name: "Vela Vibracional",
         price: 86.90,
         image: "image/vela.avif"
     },
     {
         id: 8,
-        name: "Toalha de Altar - Árvore da Vida",
+        name: "Toalha de Altar",
         price: 122.99,
         image: "image/toalha.avif"
     },
