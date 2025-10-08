@@ -48,14 +48,62 @@
     </div>-->
     <section id="cadastro" class="products">
         <h2 class="section-title">Cadastro</h2>
-        <p>Cadastre e receba nossas promoções</p>
+        <p class="section-title">Cadastre e receba nossas promoções</p>
         <form method="post">
             <label>Nome Completo</label><br>
             <input type="text" id="nome" placeholder="seu nome aqui" required><br><br>
             <label>E-mail</label><br>
             <input type="email" id="email" placeholder="seu e-mail aqui" required><br><br>
             <label>Telefone</label><br>
-            <input type="tel" id="telefone" placeholder="seu telefone aqui" required>
+            <input type="tel" id="telefone" placeholder="seu telefone aqui" required><br><br>
+        
+            <label for="cep">Consulte seu cep</label><br>
+            <input type="text" id="cep" name="cep" placeholder="EX: 123456789"><br><br>
+        
+            <label for="logradouro">Logradouro</label><br>
+            <input type="text" id="logradouro" name="logradouro"><br><br>
+        
+            <label for="bairro">Bairro:</label><br>
+            <input type="text" id="bairro" name="bairro"><br><br>
+        
+            <label for="cidade">Cidade:</label><br>
+            <input type="text" id="cidade" name="cidade"><br><br>
+        
+            <label for="estado">Estado:</label><br>
+            <input type="text" id="estado" name="estado"><br><br>
+        
+            <!-- Botão Cadastrar -->
+            <button type="submit" class="btn-cadastrar">Cadastrar</button>
+        </form>
+        
+            </body>
+            <script>
+                // 1. Selecionar o elemento pelo ID
+                var campoCep = document.getElementById('cep');
+                // 2. Adicionar o event listener para o evento 'blur'(executado quando é retirado o mouse)
+              campoCep.addEventListener('blur', function() {
+               let valorCep = campoCep.value; // pegar o valor do campoCep
+                fetch("https://viacep.com.br/ws/"+valorCep+"/json/")
+              .then(response => response.json())
+              .then(data => {
+                console.log(data);
+                document.getElementById('logradouro').value = data.logradouro ||'';
+                document.getElementById('bairro').value = data.bairro ||'';
+                document.getElementById('cidade').value = data.localidade ||'';
+                document.getElementById('estado').value = data.estado ||'';
+                mudaBorda(0)
+              })
+              .catch(error => mudaBorda(1));
+            });
+            
+            function mudaBorda(cor) {
+                if(cor == 1){
+                    campoCep.style.border = "4px solid red";
+                }else{
+                    campoCep.style.border = "4px solid green";
+                }
+            }
+            </script>
         </form>
     </section>
     

@@ -1,280 +1,269 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        /* Reset e configurações básicas */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* Cabeçalho */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        table{
-            margin: 0 auto;
-            /*width: 100%;*/
-            border-collapse: collapse;
-        
-        }
-        tr,th,td{
-            border: 1px solid #c7c7c7e1;
-            text-align: left;
-            padding: 8px;
-        }
-        tr:nth-child(even){
-            background-color: #c9c9cc;
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        p{
-            font-size: 1.8rem;
-            font-weight: 700;
-            
-            color: #5f5959;
-            font-family:Arial, Helvetica, sans-serif
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #5f5959;
-            font-family:Arial, Helvetica, sans-serif
-        }
-        
-        .logo span {
-            color: #1917b8e1;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 1.5rem;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #5ceb98;
-        }
-        
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-            font-family:Arial, Helvetica, sans-serif
-        }
-        
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: #e74c3c;
-            color: white;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            font-size: 0.7rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /* Container da calculadora */
-        form {
-            margin: 0 auto;
-            width: 38%;
-            background: #2c3e50;
-            padding: 30px 30px;
-            border-radius: 30px;
-            box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-        
-        /* Título */
-        h1 {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #ecf0f1;
-        }
-        
-        /* Labels */
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 8px;
-            color: #ecf0f1;
-        }
-        
-        /* Inputs */
-        input[type="email"], input[type="text"], input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            margin-bottom: 15px;
-            outline: none;
-            font-size: 16px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            color: #2c3e50;
-        }
-        button{
-            text-align: center;
-            font-weight: bold;
-           margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        .cart-sidebar {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 350px;
-            height: 100vh;
-            background-color: white;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            transition: right 0.3s ease;
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .cart-sidebar.active {
-            right: 0;
-        }
-        
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .close-cart {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #555;
-        }
-        
-        .cart-items {
-            margin-bottom: 2rem;
-        }
-        
-        .cart-item {
-            display: flex;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .cart-item-image {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin-right: 1rem;
-        }
-        
-        .cart-item-details {
-            flex: 1;
-        }
-        
-        .cart-item-title {
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-        
-        .cart-item-price {
-            color: #19bb04fa;
-            font-weight: 600;
-        }
-        
-        .cart-item-remove {
-            background: none;
-            border: none;
-            color: #e74c3c;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .cart-total {
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-align: right;
-            margin-bottom: 1.5rem;
-        }
-        
-        .checkout-btn {
-            width: 100%;
-            padding: 1rem;
-            background-color: #2e46cc;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .checkout-btn:hover {
-            background-color: #27ae60;
-        }
-        
-        /* Rodapé */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            margin: 1.5rem 0;
-        }
-        
-        .footer-links a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            text-decoration: underline;
-            color: #e74c3c;
-        }   
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5f5959;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.logo span {
+    color: #1917b8e1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #5ceb98;
+    border-bottom-color: #5ceb98;
+    outline: none;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #5f5959;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #5ceb98;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    box-shadow: 0 0 4px rgba(231, 76, 60, 0.7);
+}
+
+/* Formulário de cadastro */
+.products {
+    max-width: 700px;
+    margin: 3rem auto 5rem auto;
+    padding: 2.5rem 2.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.products:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.products p.section-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 2px solid #c7c7c7e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+form input:focus {
+    border-color: #5ceb98;
+    box-shadow: 0 0 8px rgba(92, 235, 152, 0.5);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Indicação da borda do campo CEP via JS */
+input#cep {
+    transition: border-color 0.3s ease;
+}
+
+/* Tabela estilizada */
+table {
+    margin: 1.5rem auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+}
+
+tr, th, td {
+    border: 1px solid #c7c7c7e1;
+    text-align: left;
+    padding: 10px 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #c9c9cc;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    user-select: none;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #e74c3c;
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .products {
+        margin: 2rem 1rem 3rem 1rem;
+        padding: 2rem 2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+.btn-cadastrar {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #0419bb;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1.5rem;
+    user-select: none;
+}
+
+.btn-cadastrar:hover,
+.btn-cadastrar:focus {
+    background-color: #2bd36b;
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.btn-cadastrar:active {
+    transform: translateY(0);
+}
